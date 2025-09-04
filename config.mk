@@ -1,5 +1,7 @@
-# dwm version
-VERSION = 6.5
+# aero version
+# Determined via:
+# [aero_version_number].[dwm_version_number]
+VERSION = 0.6.5
 
 # Customize below to fit your system
 
@@ -27,8 +29,9 @@ LIBS = -L${X11LIB} -lX11 ${XINERAMALIBS} ${FREETYPELIBS}
 
 # flags
 CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700L -DVERSION=\"${VERSION}\" ${XINERAMAFLAGS}
-#CFLAGS   = -g -std=c99 -pedantic -Wall -O0 ${INCS} ${CPPFLAGS}
-CFLAGS   = -std=c99 -pedantic -Wall -Wno-deprecated-declarations -Os ${INCS} ${CPPFLAGS}
+CFLAGS   = -g -std=c99 -pedantic -Wall -O0 ${INCS} ${CPPFLAGS}
+# CFLAGS   = -g -std=c99 -DDEBUG -pedantic -Wall -O0 ${INCS} ${CPPFLAGS}
+#CFLAGS   = -std=c99 -pedantic -Wall -Wno-deprecated-declarations -Os ${INCS} ${CPPFLAGS}
 LDFLAGS  = ${LIBS}
 
 # Solaris

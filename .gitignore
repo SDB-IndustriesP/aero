@@ -1,0 +1,6 @@
+aero
+aero.o
+config.def.h
+drw.o
+dwm_patches/
+util.o
