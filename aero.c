@@ -997,8 +997,9 @@ void expose(XEvent *e) {
 }
 
 void opacity(Client *c, double opacity) {
-  if (!c)
+  if (!c) {
     return;
+  }
   if (opacity >= 0 && opacity <= 1) {
     unsigned long real_opacity[] = {opacity * 0xffffffff};
     XChangeProperty(dpy, c->win, netatom[NetWMWindowsOpacity], XA_CARDINAL, 32,
@@ -1394,8 +1395,8 @@ void manage(Window w, XWindowAttributes *wa) {
   c->bw = borderpx;
 
   if (c->iscentered) {
-      c->x = (c->mon->mw - WIDTH(c)) / 2;
-      c->y = (c->mon->mh - HEIGHT(c)) / 2;
+    c->x = (c->mon->mw - WIDTH(c)) / 2;
+    c->y = (c->mon->mh - HEIGHT(c)) / 2;
   }
 
   wc.border_width = c->bw;
