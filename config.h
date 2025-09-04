@@ -32,9 +32,6 @@ static const char swalsymbol[] = "👅";
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
-/* Lockfile */
-static char lockfile[] = "/tmp/dwm.lock";
-
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
@@ -43,6 +40,8 @@ static const Rule rules[] = {
 	/* class      instance            title       tags mask     iscentered   isfloating   focusopacity    unfocusopacity     monitor */
 	{ "Gimp",       NULL,             NULL,       0,            0,           1,           1.0,            inactiveopacity,   -1 },
 	{ "Firefox",    NULL,             NULL,       1 << 8,       0,           0,           activeopacity,  inactiveopacity,   -1 },
+
+	{ "Alacritty",    NULL,             NULL,       0,       0,           0,           0.8,  inactiveopacity,   -1 },
 };
 
 /* layout(s) */
@@ -208,4 +207,9 @@ static Gesture gestures[] = {
 static Signal signals[] = {
 	/* signum       function        argument  */
 	{ 1,            setlayout,      {.v = 0} },
+};
+
+// Auto start
+static const char *const autostart[] = {
+    NULL // terminate
 };
