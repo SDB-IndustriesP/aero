@@ -19,10 +19,12 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+
+#include "themes/catppuccin.h"
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+    /*                     fg       bg      border */
+    [SchemeNorm]       = { white,   black,  gray2 },
+    [SchemeSel]        = { teal,   black,   blue  },
 };
 /* window swallowing */
 static const int swaldecay = 3;
@@ -38,8 +40,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance            title       tags mask     iscentered   isfloating   focusopacity    unfocusopacity     monitor */
-	{ "Gimp",       NULL,             NULL,       0,            0,           1,           1.0,            inactiveopacity,   -1 },
-	{ "Firefox",    NULL,             NULL,       1 << 8,       0,           0,           activeopacity,  inactiveopacity,   -1 },
+	{ "qalculate-gtk",       NULL,             NULL,       0,            0,           1,           1.0,            inactiveopacity,   -1 },
 };
 
 /* layout(s) */
