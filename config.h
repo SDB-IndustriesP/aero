@@ -211,6 +211,6 @@ static Signal signals[] = {
 // Auto start
 static const char *const autostart[] = {
     // "picom", "-b", NULL,
-    // TODO: ADD DUNST
+    // TODO: ADD DUNST, MPD
     NULL // terminate
 };
