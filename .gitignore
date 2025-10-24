@@ -4,3 +4,6 @@ config.def.h
 drw.o
 dwm_patches/
 util.o
+compile_commands.json
+obj
+.cache
